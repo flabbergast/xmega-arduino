@@ -1,0 +1,8 @@
+dragonjtag.name=ATMEL Dragon Jtag
+dragonjtag.communication=usb
+dragonjtag.protocol=dragon_jtag
+
+dragonpdi.name=ATMEL Dragon PDI
+dragonpdi.communication=usb
+dragonpdi.protocol=dragon_pdi
+
