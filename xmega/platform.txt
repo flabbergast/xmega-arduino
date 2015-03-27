@@ -76,3 +76,10 @@ tools.avrdude.bootloader.params.verbose=-v -v -v -v
 tools.avrdude.bootloader.params.quiet=-q -q
 tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.ide.path}/hardware/arduino/avr/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
 
+### dfu-programmer
+tools.dfu_programmer.cmd.path={runtime.hardware.path}/tools/dfu-programmer.run.sh
+
+tools.dfu_programmer.upload.params.verbose=--debug 10
+tools.dfu_programmer.upload.params.quiet=--quiet
+tools.dfu_programmer.upload.pattern="{cmd.path}" {build.mcu} flash {upload.verbose} "{build.path}/{build.project_name}.hex"
+

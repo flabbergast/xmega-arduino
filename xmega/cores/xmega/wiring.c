@@ -388,7 +388,7 @@ static void initAdc( ADC_t* adc ) {
                      ;
 
         // Some fixes since A4U constants have sometimes different names
-        #ifndef ADC_REFSEL_GCC_gc
+        #if defined(__AVR_ATxmega128A4U__)
           #define ADC_REFSEL_VCC_gc ADC_REFSEL_INTVCC_gc
         #endif
 

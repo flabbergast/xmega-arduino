@@ -4,19 +4,21 @@ menu.usb=USB Type
 
 ##############################################################
 
-x-a4u.name=X-A4U USB stick
+xa4u.name=X-A4U USB stick
 
-x-a4u.build.mcu=atxmega128a4u
-x-a4u.build.f_cpu=32000000L
-x-a4u.build.core=xmega
-x-a4u.build.variant=x-a4u
+xa4u.build.mcu=atxmega128a4u
+xa4u.build.f_cpu=32000000L
+xa4u.build.core=xmega
+xa4u.build.variant=xa4u
 
-x-a4u.upload.tool=avrdude
-x-a4u.upload.protocol=flip2
-x-a4u.upload.maximum_size=131072
+xa4u.upload.tool=dfu_programmer
+#xa4u.upload.tool=avrdude
+xa4u.upload.protocol=flip2
+xa4u.upload.speed=115200
+xa4u.upload.maximum_size=131072
 
-x-a4u.menu.usb.serial=Serial
-x-a4u.menu.usb.serial.build.usbtype=USB_SERIAL
+xa4u.menu.usb.serial=Serial
+xa4u.menu.usb.serial.build.usbtype=USB_SERIAL
 
 ##############################################################
 
