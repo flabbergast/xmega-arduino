@@ -221,6 +221,10 @@ extern const uint8_t PROGMEM adc_to_channel_PGM[];
 #include "WString.h"
 #include "HardwareSerial.h"
 
+#if defined(USB)
+  #include "USB_serial.h"
+#endif
+
 uint16_t makeWord(uint16_t w);
 uint16_t makeWord(byte h, byte l);
 

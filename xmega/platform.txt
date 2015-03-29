@@ -26,7 +26,7 @@ compiler.elf2hex.cmd=avr-objcopy
 compiler.ldflags=
 compiler.size.cmd=avr-size
 # this can be overriden in boards.txt
-build.extra_flags=
+build.extra_flags=-D{build.usbtype}
 
 # AVR compile patterns
 # --------------------

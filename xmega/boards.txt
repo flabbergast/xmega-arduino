@@ -10,6 +10,7 @@ xa4u.build.mcu=atxmega128a4u
 xa4u.build.f_cpu=32000000L
 xa4u.build.core=xmega
 xa4u.build.variant=xa4u
+xa4u.build.usbtype=USB_SERIAL
 
 xa4u.upload.tool=dfu_programmer
 #xa4u.upload.tool=avrdude
@@ -19,6 +20,8 @@ xa4u.upload.maximum_size=131072
 
 xa4u.menu.usb.serial=Serial
 xa4u.menu.usb.serial.build.usbtype=USB_SERIAL
+xa4u.menu.usb.none=No USB
+xa4u.menu.usb.none.build.usbtype=USB_NONE
 
 ##############################################################
 
@@ -28,6 +31,7 @@ api.build.mcu=atxmega128a3
 api.build.f_cpu=32000000L
 api.build.core=xmega
 api.build.variant=api
+api.build.usbtype=USB_NONE
 
 api.upload.tool=avrdude
 api.upload.protocol=avr109
@@ -43,6 +47,7 @@ sfe.build.mcu=atxmega128a1
 sfe.build.f_cpu=32000000L
 sfe.build.core=xmega
 sfe.build.variant=sfe
+sfe.build.usbtype=USB_NONE
 
 sfe.upload.tool=avrdude
 sfe.upload.maximum_size=131072
@@ -82,6 +87,7 @@ xplain.build.mcu=atxmega128a1
 xplain.build.f_cpu=32000000L
 xplain.build.core=xmega
 xplain.build.variant=xplain
+xplain.build.usbtype=USB_NONE
 
 xplain.upload.tool=avrdude
 xplain.upload.maximum_size=131072
@@ -139,6 +145,7 @@ akafuino.build.mcu=atxmega32a4
 akafuino.build.f_cpu=32000000L
 akafuino.build.core=xmega
 akafuino.build.variant=akafuino
+akafuino.build.usbtype=USB_NONE
 
 akafuino.upload.tool=avrdude
 akafuino.upload.protocol=avr109

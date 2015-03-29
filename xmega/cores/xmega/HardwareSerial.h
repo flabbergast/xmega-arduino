@@ -87,7 +87,11 @@ class HardwareSerial : public Stream
 // Assume that USART always start from C0 and goes up
 // At this stage we are only interested in the amount of USARTs
 #if defined(USARTC0_RXC_vect)
-extern HardwareSerial Serial;
+  #if defined(USB_SERIAL)
+  extern HardwareSerial Serial0;
+  #else
+  extern HardwareSerial Serial;
+  #endif
 #endif
 #if defined(USARTC1_RXC_vect)
 extern HardwareSerial Serial1;
