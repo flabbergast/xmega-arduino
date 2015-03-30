@@ -10,6 +10,7 @@ version=1.5.5
 
 # Default "compiler.path" is correct
 compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.path.windows={runtime.tools.avr-gcc.path}/bin/
 compiler.c.cmd=avr-gcc
 compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
 compiler.c.elf.flags=-Os -Wl,--gc-sections
@@ -58,7 +59,9 @@ recipe.size.regex=Total\s+([0-9]+).*
 # -------------------
 
 tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.cmd.path.windows={runtime.tools.avr-gcc.path}/bin/avrdude.exe
 tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.config.path.windows={runtime.tools.avr-gcc.path}/etc/avrdude.conf
 
 tools.avrdude.upload.params.verbose=-v -v -v -v
 tools.avrdude.upload.params.quiet=-q -q
