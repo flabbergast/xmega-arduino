@@ -39,10 +39,15 @@ Select one of the Xmega boards in your IDE. Enjoy!
   possibly it's buggy. However it should be good enough for some basic
   Serial support.
 - The build settings assume DFU bootloader. The flashing is done with
-  [dfu-programmer], supplied in the zip (tested on Mac OS X, Linux (i386
+  [dfu-programmer], supplied in the zip (tested on Mac OS X, Linux (i686
   and x86_64 - you'll need to install dfu-programmer manually on arm).
 - I've only tested it on [X-A4U-stick] - I don't have any other XMEGA
   boards.
+- `dfu-programmer` on linux might claim that 'No device present' even if
+  the DFU bootloader shows up on `lsusb`. It's a permissions problem
+  then - give your user enough permissions to access that usb device
+  (google usb device permissions udev rule to see how can you fix that
+  on your particular system).
 
 
 

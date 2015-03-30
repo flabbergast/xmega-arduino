@@ -9,10 +9,9 @@ DFU_COMMAND=dfu-programmer
 if [[ $PLATFORM == "Darwin" ]]; then
   DFU_COMMAND="$DIR/dfu-programmer.osx"
 elif [[ $PLATFORM == "Linux" ]]; then
-  if [[ $ARCH == "x86_64" ]]; then
-    DFU_COMMAND="LD_LIBRARY_PATH=$DIR/libs.linux.x86_64 $DIR/dfu-programmer.linux.x86_64"
-  elif [[ $ARCH == "i386" ]]; then
-    DFU_COMMAND="$DIR/dfu-programmer.linux.i386"
+  if [[ $ARCH == "x86_64" || $ARCH == "i686" ]]; then
+    export LD_LIBRARY_PATH="$DIR/libs.linux.$ARCH"
+    DFU_COMMAND="$DIR/dfu-programmer.linux.$ARCH"
   fi
 fi
 "$DFU_COMMAND" $1 erase
