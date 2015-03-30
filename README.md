@@ -18,6 +18,10 @@ I've added support for USB enabled atxmega chips (at the moment, one
 - Various third-party libraries might (and most probably do) need some
   adjustments to work with XMEGAs.
 
+- Because Arduino 1.6.2 is inconsistent as to how does it refer to where
+  the compiler resides, you might need to adjust `platform.txt` on 32bit
+  linux (if the compiler or avrdude is not found).
+
 # Installation
 
 Download zip (button on the right) and unpack to your

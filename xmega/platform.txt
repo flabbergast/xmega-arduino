@@ -2,15 +2,17 @@
 # Xmegaduino compile variables
 # --------------------- 
 
-name=Xmegaduino Boards
-version=1.5.5
+name=Xmega Boards
+version=1.6.2
 
 # AVR compile variables
 # --------------------- 
 
 # Default "compiler.path" is correct
-compiler.path={runtime.tools.avr-gcc.path}/bin/
-compiler.path.macosx={runtime.ide.path}/hardware/tools/avr/bin/
+# no *not* define it here - it's inconsistent across Arduinos for different
+#  platforms - even linux.i686 and linux.x86_64 .... dammit
+#compiler.path={runtime.tools.avr-gcc.path}/bin/
+#compiler.path.macosx={runtime.ide.path}/hardware/tools/avr/bin/
 compiler.c.cmd=avr-gcc
 compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
 compiler.c.elf.flags=-Os -Wl,--gc-sections
@@ -58,12 +60,16 @@ recipe.size.regex=Total\s+([0-9]+).*
 # AVR Uploader/Programmers tools
 # -------------------
 
+# this won't work for linux/i686 because Arduino itself is inconsistent
+#  and does not provide a way to distinguish x86_64 and i686
 tools.avrdude.path={runtime.tools.avrdude.path}
 tools.avrdude.cmd.path={path}/bin/avrdude
 tools.avrdude.cmd.path.windows={path}/bin/avrdude.exe
 tools.avrdude.cmd.path.macosx={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.cmd.path.linux={runtime.ide.path}/hardware/tools/avr/bin/avrdude
 tools.avrdude.config.path={path}/etc/avrdude.conf
 tools.avrdude.config.path.macosx={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.config.path.linux={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
 
 tools.avrdude.upload.params.verbose=-v -v -v -v
 tools.avrdude.upload.params.quiet=-q -q

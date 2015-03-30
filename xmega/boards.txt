@@ -26,9 +26,9 @@ xa4u.menu.usb.none.build.usbtype=USB_NONE
 
 ##############################################################
 
-mattaira4u.name=X-A4U USB stick
+mattaira4u.name=MattairTech 128A4U breakout
 
-mattaira4u.build.board=XMEGA_MATTAIR_A4U
+mattaira4u.build.board=XMEGA_MATTAIR_128A4U
 mattaira4u.build.mcu=atxmega128a4u
 mattaira4u.build.f_cpu=32000000L
 mattaira4u.build.core=xmega

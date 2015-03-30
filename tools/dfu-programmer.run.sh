@@ -17,4 +17,4 @@ fi
 "$DFU_COMMAND" $1 erase
 "$DFU_COMMAND" $@
 "$DFU_COMMAND" $1 reset
-exit 0
+exit
