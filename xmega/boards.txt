@@ -6,6 +6,7 @@ menu.usb=USB Type
 
 xa4u.name=X-A4U USB stick
 
+xa4u.build.board=XMEGA_XA4U
 xa4u.build.mcu=atxmega128a4u
 xa4u.build.f_cpu=32000000L
 xa4u.build.core=xmega
@@ -27,6 +28,7 @@ xa4u.menu.usb.none.build.usbtype=USB_NONE
 
 api.name=Apitronics Bee
 
+api.build.board=XMEGA_APITRONICS_BEE
 api.build.mcu=atxmega128a3
 api.build.f_cpu=32000000L
 api.build.core=xmega
@@ -43,6 +45,7 @@ api.upload.maximum_size=131072
 sfe.name=SparkFun Xmega100
 sfe.verbose=true
 
+sfe.build.board=XMEGA_SPARKFUN_X100
 sfe.build.mcu=atxmega128a1
 sfe.build.f_cpu=32000000L
 sfe.build.core=xmega
@@ -83,6 +86,7 @@ sfe.menu.programmer.pdi.upload.using=avrisppdi
 
 xplain.name=XPlain
 
+xplain.build.board=XMEGA_XPLAIN
 xplain.build.mcu=atxmega128a1
 xplain.build.f_cpu=32000000L
 xplain.build.core=xmega
@@ -141,6 +145,7 @@ xplain.menu.programmer.pdi.using=avrisppdi
 
 akafuino.name=Akafuino X
 
+akafuino.build.board=XMEGA_AKAFUINO_X
 akafuino.build.mcu=atxmega32a4
 akafuino.build.f_cpu=32000000L
 akafuino.build.core=xmega
