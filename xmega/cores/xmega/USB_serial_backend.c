@@ -473,6 +473,12 @@ void usb_cb_start_of_frame(void) {
  *
  **************************************************************************/
 
+void usb_serial_clear_constants(void) {
+  cdc_rx_buf_next_char_ptr=0;
+  cdc_tx_buf_next_char_ptr=0;
+  cdc_line_rtsdtr=0;
+}
+
 // returns -1 when problem
 int16_t usb_serial_getchar(void) {
   size_t cur_avail = usb_serial_available();

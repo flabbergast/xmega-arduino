@@ -9,15 +9,17 @@
 extern volatile uint8_t usb_configuration;
 
 void usb_init(){
-  //uint_reg_t CurrentGlobalInt = GetGlobalInterruptMask();
-  //GlobalInterruptDisable();
+  usb_configure_clock();
+  // Enable USB interrupts
+  USB.INTCTRLA = USB_SOFIE_bm | USB_BUSEVIE_bm | USB_INTLVL_MED_gc;
+  USB.INTCTRLB = USB_TRNIE_bm | USB_SETUPIE_bm;
 
   NVM.CMD  = NVM_CMD_READ_CALIB_ROW_gc;
   USB.CAL0 = pgm_read_byte(offsetof(NVM_PROD_SIGNATURES_t, USBCAL0));
   NVM.CMD  = NVM_CMD_READ_CALIB_ROW_gc;
   USB.CAL1 = pgm_read_byte(offsetof(NVM_PROD_SIGNATURES_t, USBCAL1));
 
-  //SetGlobalInterruptMask(CurrentGlobalInt);
+  sei();
 
   usb_reset();
 }

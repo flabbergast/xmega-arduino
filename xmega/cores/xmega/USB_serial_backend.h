@@ -20,6 +20,8 @@ extern volatile size_t cdc_tx_buf_next_char_ptr;
 
 // *** functions ***
 
+void usb_serial_clear_constants(void);
+
 // receiving data
 int16_t usb_serial_getchar(void);	// receive a character (-1 if timeout/error)
 int16_t usb_serial_peek(void);	// peek at the next char (-1 if timeout/error)

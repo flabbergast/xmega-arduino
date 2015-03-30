@@ -13,13 +13,9 @@ int main(void)
 	init();
 
 #if defined(USB_SERIAL)
-  usb_configure_clock();
-  // Enable USB interrupts
-  USB.INTCTRLA = USB_SOFIE_bm | USB_BUSEVIE_bm | USB_INTLVL_MED_gc;
-  USB.INTCTRLB = USB_TRNIE_bm | USB_SETUPIE_bm;
   usb_init();
-  sei();
   usb_attach();
+  Serial.begin(0); // ugly, but I can't figure out why it doesn't work without this...
 #endif
 
 	setup();

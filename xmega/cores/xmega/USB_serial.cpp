@@ -37,9 +37,7 @@ extern "C" {
 
 void usb_serial_class::begin(long speed)
 {
-  cdc_rx_buf_next_char_ptr=0;
-  cdc_tx_buf_next_char_ptr=0;
-  cdc_line_rtsdtr=0;
+  usb_serial_clear_constants();
 	// make sure USB is initialized
 	//usb_init();
   //usb_attach();
