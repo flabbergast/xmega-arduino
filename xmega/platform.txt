@@ -81,7 +81,7 @@ tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verb
 
 ### dfu-programmer
 tools.dfu_programmer.cmd.path={runtime.hardware.path}/tools/dfu-programmer.run.sh
-
+tools.dfu_programmer.cmd.path.windows={runtime.hardware.path}/tools/dfu-programmer.run.bat
 tools.dfu_programmer.upload.params.verbose=--debug 10
 tools.dfu_programmer.upload.params.quiet=--quiet
 tools.dfu_programmer.upload.pattern="{cmd.path}" {build.mcu} flash {upload.verbose} "{build.path}/{build.project_name}.hex"
