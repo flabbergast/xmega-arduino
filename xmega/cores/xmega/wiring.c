@@ -369,11 +369,14 @@ void init()
 	              RTC_COMPINTLVL_OFF_gc;
 #endif
 
+#if defined(XMEGA_XPLAIN)
         /*************************************/
         /* Enable reset button               */
         initResetButton();
 
         /*************************************/
+#endif
+
 	/* Enable interrupts.                */
 	PMIC.CTRL |= PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
 	sei();
@@ -447,6 +450,7 @@ static uint8_t ReadCalibrationByte(uint8_t index)
 
 // TODO: Do this only for xplain board.
 
+#if defined(XMEGA_XPLAIN)
 static const byte resetPin = 31;
 
 static void resetRupt() {
@@ -461,3 +465,5 @@ static void resetRupt() {
 static void initResetButton() {
     attachInterrupt( resetPin, resetRupt, FALLING );
 }
+#endif
+
