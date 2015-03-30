@@ -10,7 +10,7 @@ if [[ $PLATFORM == "Darwin" ]]; then
   DFU_COMMAND="$DIR/dfu-programmer.osx"
 elif [[ $PLATFORM == "Linux" ]]; then
   if [[ $ARCH == "x86_64" ]]; then
-    DFU_COMMAND="$DIR/dfu-programmer.linux.x86_64"
+    DFU_COMMAND="LD_LIBRARY_PATH=$DIR/libs.linux.x86_64 $DIR/dfu-programmer.linux.x86_64"
   elif [[ $ARCH == "i386" ]]; then
     DFU_COMMAND="$DIR/dfu-programmer.linux.i386"
   fi
